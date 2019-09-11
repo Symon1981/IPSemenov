@@ -1,3 +1,6 @@
 let http = require('http');
-
-http.createServer().listen(3000);
+http.createServer(function(req, res){
+    res.writeHead(200);
+    res.write("Privet!");
+    res.end();
+}).listen(80);
